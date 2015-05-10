@@ -481,7 +481,7 @@ if ($tor_reged && $tor_info)
 					}
 
 					$rel_sign = (!$guest && $peer['releaser']) ? '&nbsp;<b><sup>&reg;</sup></b>' : '';
-					$name     = profile_url($peer). $rel_sign;
+					$name     = '<a href="'. $u_prof_href .'" class="'. $link_class .'">'. wbr($peer['username']) .' '.$rel_sign .'</a>';
 					$up_tot   = ($p_max_up)   ? humn_size($p_max_up)   : '-';
 					$down_tot = ($p_max_down) ? humn_size($p_max_down) : '-';
 					$up_ratio = ($p_max_down) ? round(($p_max_up / $p_max_down), 2) : '';
